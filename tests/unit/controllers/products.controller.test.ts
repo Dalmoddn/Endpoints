@@ -36,4 +36,41 @@ describe('ProductsController', function () {
     expect(res.status).to.be.calledWith(201);
     expect(res.json).to.be.calledWith(expectedProduct);
   });
+  it('should handle errors and return a 500 status code with an error message', async function () {
+    const reqBody = {
+      name: 'Product 1',
+      price: 9.99,
+      userId: 1
+    };
+    req.body = reqBody;
+    sinon.stub(productsServices, 'insertItem').throws(new Error('Database error'));
+
+    await productsController.insertItem(req, res);
+
+    expect(res.status).to.be.calledWith(500);
+    expect(res.json).to.be.calledWith({ message: 'Não foi possível adicionar o produto.' });
+  });
+  it('should get all products and return the result', async function () {
+    const returnedItems = [
+      {
+        id: 1,
+        name: 'Daedalus',
+        price: '5500.00',
+        userId: 1
+      },
+      {
+        id: 2,
+        name: 'Monkey King Bar',
+        price: '5200.00',
+        userId: 1
+      }
+    ];
+
+    sinon.stub(productsServices, 'findProducts').resolves(returnedItems);
+
+    await productsController.findProducts(req, res);
+
+    expect(res.status).to.be.calledWith(200);
+    expect(res.json).to.be.calledWith(returnedItems);
+  });
 });
