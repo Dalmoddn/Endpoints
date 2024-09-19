@@ -96,26 +96,40 @@ Autenticação
 Algumas rotas são protegidas por JWT. Para obter um token, faça login na rota de autenticação (/login). Insira o token JWT nos cabeçalhos das requisições seguintes:
 
 http
+
 Copiar código
+
 Authorization: Bearer seu-token-jwt
+
 Testes
+
 Este projeto inclui testes para garantir o funcionamento correto das camadas de Service e Controller. Para rodar os testes, utilize o comando:
 
 bash
+
 Copiar código
+
 npm run test
+
 Os testes foram implementados com Jest, Mocha, e outras ferramentas de testes.
 
 Tecnologias Utilizadas
+
 TypeScript: Para tipagem estática e melhor desenvolvimento.
+
 Sequelize: ORM para gerenciamento do banco de dados.
+
 JWT: Para autenticação segura.
+
 Jest/Mocha: Para testes.
+
 Express: Framework para criação da API.
+
 Estrutura do Projeto
+
 bash
+
 Copiar código
-.
 ├── src
 │   ├── controllers  # Lógica dos controladores
 │   ├── services     # Regras de negócio
