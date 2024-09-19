@@ -131,13 +131,22 @@ bash
 
 Copiar código
 ├── src
+
 │   ├── controllers  # Lógica dos controladores
+
 │   ├── services     # Regras de negócio
+
 │   ├── models       # Definição dos modelos Sequelize
+
 │   ├── middlewares  # Middleware de autenticação
+
 │   └── routes       # Definição das rotas da API
+
 ├── tests            # Testes unitários e de integração
+
 ├── .env             # Variáveis de ambiente
+
 └── README.md
-Contribuições
+
+Contribuições.
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
