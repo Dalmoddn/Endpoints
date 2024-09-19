@@ -11,48 +11,88 @@ Autenticação JWT para proteger rotas específicas.
 Testes unitários e de integração nas camadas de Service e Controllers.
 
 Gerenciamento de dados com Sequelize.
+
 Organização do código em camadas (Controllers e Services).
+
 Requisitos
+
 Node.js (>= 14.x)
+
 npm (>= 6.x) ou yarn
+
 Banco de dados MySQL ou PostgreSQL
+
 Sequelize (>= 6.x)
+
 Instalação
 Clone o repositório:
+
 bash
+
 Copiar código
-git clone https://github.com/seu-usuario/nome-do-projeto.git
+
+git clone https://github.com/dalmoddn/endpoints
+
 cd nome-do-projeto
+
 Instale as dependências:
+
 bash
+
 Copiar código
+
 npm install
+
 Configure as variáveis de ambiente. Crie um arquivo .env na raiz do projeto com as seguintes variáveis:
+
 env
+
 Copiar código
+
 DB_HOST=localhost
+
 DB_USER=seu-usuario
+
 DB_PASS=sua-senha
+
 DB_NAME=nome-do-banco
+
 JWT_SECRET=sua-chave-secreta
+
 Execute as migrações do banco de dados:
+
 bash
+
 Copiar código
+
 npx sequelize db:migrate
+
 Inicie o servidor:
+
 bash
+
 Copiar código
+
 npm run dev
+
 A aplicação estará disponível em http://localhost:3000.
 
 Endpoints
+
 Rota: /items
+
 GET /items: Lista todos os itens medievais disponíveis.
+
 POST /items: Cria um novo item medieval. (Rota autenticada)
+
 Rota: /items/:id
+
 GET /items/:id: Retorna detalhes de um item específico.
+
 PUT /items/:id: Atualiza as informações de um item específico. (Rota autenticada)
+
 Autenticação
+
 Algumas rotas são protegidas por JWT. Para obter um token, faça login na rota de autenticação (/login). Insira o token JWT nos cabeçalhos das requisições seguintes:
 
 http
