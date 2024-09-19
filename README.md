@@ -5,8 +5,11 @@ O projeto também conta com testes automatizados para garantir a qualidade do c�
 
 Funcionalidades
 CRUD de itens medievais.
+
 Autenticação JWT para proteger rotas específicas.
+
 Testes unitários e de integração nas camadas de Service e Controllers.
+
 Gerenciamento de dados com Sequelize.
 Organização do código em camadas (Controllers e Services).
 Requisitos
