@@ -1,7 +1,3 @@
-Aqui está um modelo de README para o seu projeto de uma loja de itens medievais, utilizando TypeScript, Sequelize, JWT e testes para as camadas de **Service** e **Controllers**:
-
----
-
 # Medieval Item Store API
 
 ## Descrição
@@ -118,11 +114,3 @@ Os testes foram implementados com **Jest**, **Mocha**, e outras ferramentas de t
 ## Contribuições
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma _issue_ ou enviar um _pull request_.
-
-## Licença
-
-Este projeto está licenciado sob a [MIT License](LICENSE).
-
----
-
-Com isso, o seu README já está pronto para oferecer uma boa visão geral do projeto. Você pode personalizá-lo ainda mais com informações específicas, conforme o desenvolvimento avança!
