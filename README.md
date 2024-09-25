@@ -23,11 +23,6 @@ Este projeto é uma API RESTful para uma loja de itens medievais sob encomenda, 
 
 1. Clone o repositório:
 
-```bash
-git clone https://github.com/seu-usuario/nome-do-projeto.git
-cd nome-do-projeto
-```
-
 2. Instale as dependências:
 
 ```bash
